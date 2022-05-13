@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--  Meta Einstellungen  -->
+    <title>Cookie Clicker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--  Files integriegren  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="script.js"></script>
+     <!-- Favicon Icons laden  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <h1>Cookie Clicker by Mariano and Philipp</h1>
+    <div class="bodyWrapper">
+        <div class="bodyWrapperLeft">
+
+            <!-- Cookie -->
+            <div class="cookie_img">
+                <img class="cookie" src="img/cookie_v3.png" onclick="playAudio('audio/audio.mp3')">
+            </div>
+
+            <!-- Anzahl Cookies -->
+            <div class="amount"></div>
+        </div>
+        <div class="bodyWrapperRight">
+
+            <!-- Statistiken -->
+            <div class="overview">
+                <div class="stats_title">Statistik</div>
+                <p class="statsCategories">
+                    <div>
+                        <span>Aktuelle Anzahl Cookies: </span><span class="spanCookies">112121220</span>
+                    </div>
+                    <br>
+                    <div>
+                        <span>Total Cookies pro Klick: </span><span class="spanClicksValue">1</span><br>
+                    </div>
+                    <div>
+                        <span>Cookies pro Sekunde durch Bauern: </span><span class="spanBauernValue">0</span><br>
+                    </div>
+                    <div>
+                        <span>Cookies pro Sekunde durch Fabriken: </span><span class="spanFabrikValue">0</span><br>
+                    </div>
+                    <div>
+                        <span>Cookies pro Sekunde durch Portale: </span><span class="spanPortalValue">0</span><br>
+                    </div>
+                </p>
+            </div>
+
+            <!--  Upgrades  -->
+            <div class="upgrades">
+                <div class="clickUpgradeWrapper">
+                    <div class="infoTriggerButton">?</div>
+                    <div class="upgradeNode">+1 Cookie pro Klick</div>
+                    <div class="infoNode clickInfo">
+                        <div class="infoTriangle"></div>
+                        <p class="kostenUpgrade">Kosten: <span>10</span> cookies</p>
+                        <p class="info">Du erhälst 1 Cookie pro Klick mehr wenn du dieses Upgrade machst.</p>
+                    </div>
+                </div>
+                <div class="bauerUpgradeWrapper">
+                    <div class="infoTriggerButton">?</div>
+                    <div class="upgradeNode">+1 Bauer </div>
+                    <div class="infoNode bauerInfo">
+                        <div class="infoTriangle"></div>
+                        <p class="kostenUpgrade">Kosten: <span>50</span> cookies</p>
+                        <p class="info">Produziert jede Sekunde 1 Cookie</p>
+                    </div>
+                </div>
+                <div class="fabrikUpgradeWrapper">
+                    <div class="infoTriggerButton">?</div>
+                    <div class="upgradeNode">+1 Fabrik</div>
+                    <div class="infoNode fabrikInfo">
+                        <div class="infoTriangle"></div>
+                        <p class="kostenUpgrade">Kosten: <span>200</span> cookies</p>
+                        <p class="info">Produziert jede Sekunde 5 Cookies</p>
+                    </div>
+                </div>
+                <div class="portalUpgradeWrapper">
+                    <div class="infoTriggerButton">?</div>
+                    <div class="upgradeNode">+1 Portal</div>
+                    <div class="infoNode portalInfo">
+                        <div class="infoTriangle"></div>
+                        <p class="kostenUpgrade">Kosten: <span>1000</span> cookies</p>
+                        <p class="info">Produziert jede Sekunde 20 Cookies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fehler Konsole -->
+    <h2>Fehler Protokoll:</h2>
+    <div class="console">
+
+    </div>
+    <div class="map">
+        <h2>Gesammelte Upgrades:</h2>
+        <div class="bauernKarte">
+
+        </div>
+        <div class="fabrikKarte">
+
+        </div>
+        <div class="portalKarte">
+
+        </div>
+    </div>
+    <!-- Buttons Speicher, zurücksetzten, Hintergrund ändern -->
+    <div class="buttonWrapper">
+        <div id="saveButton">Status Speichern</div>
+        <div id="resetButton">Spiel zurücksetzen</div>
+        <div id="colorButton">Hintergrundfarbe ändern</div>
+    </div>
+</body>
+</html>

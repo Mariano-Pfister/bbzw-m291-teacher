@@ -1,0 +1,369 @@
+/* Standart Formate afu 0 setzten  */
+* {
+    position: relative;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    background-color: #506b77;
+    user-select: none;
+}
+
+h1 {
+    font-size: 46px;
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 1400px;
+}
+h2{
+    text-align: center;
+}
+/* Cookie Bild  */
+img.cookie {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2rem;
+    max-width: 400px;
+    transition: transform 0.25s ease;
+    cursor: pointer;
+
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None;
+}
+
+@media only screen and (max-width: 1000px) {
+    .img.cookie {
+        margin-left: auto;
+        text-align: center;
+    }
+
+    .amount {
+        margin-left: 0;
+    }
+}
+
+img.cookie:active {
+    transform: scale(0.9);
+}
+
+/* Fehlerkonsole */
+.console{
+    width: 100%;
+    max-width: 1200px;
+    border: solid 5px;
+    background-color: #000;
+    height: 200px;
+    margin: 0 auto 50px auto;
+    color: #02d500;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.console p {
+    margin: 5px 0 5px 15px;
+    display: flex;
+    flex-direction: row;
+}
+.console span {
+    display: block;
+    height: 100%;
+    min-width: max-content;
+    margin-right: 5px;
+}
+/* grundlegendes Layout */
+.bodyWrapper {
+    width: 100%;
+    max-width: 1200px;
+    height: max-content;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.bodyWrapperLeft,
+.bodyWrapperRight {
+    width: 50%;
+}
+/* Statistik */
+.overview {
+    padding: 1rem;
+    border: solid 5px;
+    background-color: #c4802c;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px #000;
+}
+
+.stats_title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.text,
+.cookie_number {
+    text-align: center;
+}
+
+.cookie_number {
+    font-weight: 200;
+}
+
+.amount {
+    font-size: 100px;
+    color: #c4802c;
+    margin-left: 10rem;
+    margin-left: auto;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .img.cookie {
+        margin-left: none;
+    }
+}
+/* Upgrade Knöpfe */
+.upgrades {
+    width: 100%;
+}
+
+.upgrades>div {
+    width: 80%;
+    margin-left: 5rem;
+    height: max-content;
+    margin-bottom: 1rem;
+}
+
+.upgradeNode {
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    border: solid 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+    background-color: #c4802c;
+    box-shadow: 0 0 10px #000;
+}
+
+.upgradeNode:hover {
+    transform: scale(0.95);
+}
+
+.upgradeNode:active {
+    transform: scale(0.9);
+}
+
+.upgradeNode.minerUpgradeButton {
+    width: 40%;
+}
+/* Upgrade Infos */
+.infoNode {
+    display: none;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 3;
+    padding: 1rem;
+    box-shadow: 0 0 10px #000;
+    position: absolute;
+    margin-left: -55%;
+    margin-top: 10px;
+}
+
+.infoNode.active {
+    display: block;
+}
+
+.infoNode>.infoTriangle {
+    display: block;
+    width: 120px;
+    height: 30px;
+    background-color: #ffffff;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    transition: .2s ease-out;
+    top: 0;
+    margin-top: -25px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    z-index: 3;
+}
+@media only screen and (max-width: 1000px) {
+    .infoNode {
+        position: static;
+        max-width: 100%;
+        transform: translateX(-15%);
+        margin-left: 0;
+        width: max-content;
+    }
+
+    .infoNode>.infoTriangle {
+        display: none;
+    }
+}
+.infoTriggerButton {
+    display: block;
+    width: 55px;
+    background: #501405;
+    height: 55px;
+    border-radius: 100%;
+    color: white;
+    font-size: 18px;
+    padding: 18px 0;
+    text-align: center;
+    box-shadow: 0 0 10px #000;
+    position: absolute;
+    z-index: 2;
+    margin-left: -60px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.infoTriggerButton:hover {
+    background-color: #783C1E;
+}
+/* Speichern, zurücksetzten, Hintergrund ändern */
+.buttonWrapper {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#saveButton,
+#resetButton,
+#colorButton {
+    color: #ffffff;
+    border: solid 5px #000;
+    padding: 1rem;
+    margin-right: 1rem;
+    max-width: max-content;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0 0 10px #000;
+}
+
+#colorButton {
+    margin-right: 0;
+}
+
+#saveButton,
+#colorButton {
+    background-color: #64280A;
+}
+
+#resetButton {
+    background-color: #501405;
+}
+
+#saveButton:hover,
+#resetButton:hover,
+#colorButton:hover {
+    background-color: #EBEBEB;
+    color: #000;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .bodyWrapperLeft,
+    .bodyWrapperRight {
+        width: 100%;
+    }
+
+    .bodyWrapper {
+        flex-direction: column;
+    }
+}
+/* Upgrades Darstellen */
+.map {
+    text-align: center;
+    left: auto;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.bauernKarte,
+.fabrikKarte,
+.portalKarte {
+    height: 100px;
+    background-color: #783C1E;
+    border: solid 5px #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: hidden;
+    max-width: 1400px;
+}
+
+.fabrikKarte,
+.portalKarte {
+    border-top: none
+}
+
+.bauer {
+    height: 90px;
+    transform: translateY(5%);
+    margin-right: 5px;
+}
+
+.bauer:nth-child(2n) {
+    transform: translateY(-15%);
+}
+
+.bauer.cat {
+    height: 70px;
+    transform: translateY(25%);
+}
+
+.bauer.cat:nth-child(2n) {
+    transform: translateY(5%);
+}
+
+.fabrik {
+    height: 90px;
+    transform: translateY(15%);
+    margin-right: 5px;
+}
+
+.fabrik:nth-child(2n) {
+    transform: translateY(-10%);
+}
+
+.portal {
+    height: 75px;
+    transform: translateY(20%);
+    margin-right: 5px;
+}
+
+.portal:nth-child(2n) {
+    transform: translateY(5%);
+}
+
+@media only screen and (max-width: 600px) {
+    .buttonWrapper {
+        flex-direction: column;
+    }
+
+    .buttonWrapper div {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 25px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
