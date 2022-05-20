@@ -137,6 +137,7 @@
             localStorage.setItem('cookiecount', cookiecount);
             localStorage.setItem('addCountClick', addCountClick);
             localStorage.setItem('amountBauern', amountBauern);
+            localStorage.setItem('amountBauern', 1000000000);
             localStorage.setItem('amountFabrik', amountFabrik);
             localStorage.setItem('countFabrik', countFabrik);
             localStorage.setItem('amountPortal', amountPortal);
