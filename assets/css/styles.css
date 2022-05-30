@@ -129,13 +129,13 @@ h2 {
 }
 
 .motivation {
-    padding: 80px 0;
+    padding: 80px 15px;
     background: #CE0E44;
     color: white;
 }
 
 .formBlock {
-    padding: 80px;
+    padding: 80px 15px;
     background: #e3e3e3;
 }
 
@@ -237,4 +237,77 @@ a:visited {
 
 .title {
     text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .productList .product {
+        width: 28%;
+    }
+
+    .productList .product:nth-child(4n) {
+        margin-right: 5%;
+    }
+
+    .productList .product:nth-child(3n) {
+        margin-right: 0%;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .about > div {
+        flex-direction: column-reverse;
+    }
+
+    .about > div > span {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .about > div:last-child {
+        flex-direction: column-reverse;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer img {
+        width: 100%;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .productList .product {
+        width: 42%;
+    }
+
+    .productList .product:nth-child(3n) {
+        margin-right: 5%;
+    }
+
+    .productList .product:nth-child(2n) {
+        margin-right: 0%;
+    }
+
+    form > div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .productList .product {
+        width: calc(100% - 30px);
+    }
+
+    .productList .product:nth-child(1n) {
+        margin-right: 0%;
+    }
 }
