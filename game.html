@@ -1,27 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-  <head>
+<head>
+    <!--  Meta Einstellungen  -->
+    <title>WAIFU4LIFE CLICKER</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dino Game</title>
-    <link rel="stylesheet" href="assets/css/game.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--  Files integriegren  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="game_templates/css/style.css">
+    <script type="text/javascript" src="game_templates/js/script.js"></script>
+    <!-- Favicon Icons laden  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="game_templates/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="game_templates/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="game_templates/favicons/favicon-16x16.png">
+    <link rel="manifest" href="game_templates/favicons/site.webmanifest">
+    <link rel="mask-icon" href="game_templates/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
 
-  </head>
+<body>
+    <h1>WAIFU4LIFE CLICKER</h1>
+    <div class="bodyWrapper">
+        <div class="bodyWrapperLeft">
 
-  <body>
-    <div id="game">
-      <div id="background"></div>
-      <div id="dino"></div>
-      <div id="rock"></div>
+            <!-- Anzahl clickers -->
+            <div class="amount"></div>
+
+            <!-- clicker -->
+            <div class="clicker_img">
+                <div class="rotating-border rotating-border--google">
+                    <img class="clicker" src="game_templates/img/roxy-migurdia.gif"
+                        onclick="playAudio('audio/audio.mp3')">
+                </div>
+            </div>
+
+        </div>
+        <div class="bodyWrapperRight">
+
+            <!-- Statistiken -->
+            <div class="overview">
+                <div class="stats_title">Statistik</div>
+                <p class="statsCategories">
+                    <div>
+                        <span>Aktuelle Anzahl Clicks: </span><span class="spanclickers">0</span>
+                    </div>
+                    <br>
+                    <div>
+                        <span>Total clickers pro Klick: </span><span class="spanClicksValue">1</span><br>
+                    </div>
+                    <div>
+                        <span>Clicks pro Sekunde durch uwu's: </span><span class="spanBauernValue">0</span><br>
+                    </div>
+                    <div>
+                        <span>Clicks pro Sekunde durch Ara Ara's: </span><span class="spanFabrikValue">0</span><br>
+                    </div>
+                    <div>
+                        <span>Clicks pro Sekunde durch Sugoi's: </span><span class="spanPortalValue">0</span><br>
+                    </div>
+                </p>
+            </div>
+
+            <!--  Upgrades  -->
+            <div class="upgrades">
+                <div class="clickUpgradeWrapper">
+                    <div class="infoTriggerButton">?</div>
+                    <div class="upgradeNode">+1 clicker pro Klick</div>
+                    <div class="infoNode clickInfo">
+                        <div class="infoTriangle"></div>
+                        <p class="kostenUpgrade">Kosten: <span>10</span> clickers</p>
+                        <p class="info">Du erhälst 1 clicker pro Klick mehr wenn du dieses Upgrade machst.</p>
+                    </div>
+                </div>
+                <div class="bauerUpgradeWrapper">
+                    <div class="infoTriggerButton">?</div>
+                    <div class="upgradeNode">+1 uwu </div>
+                    <div class="infoNode bauerInfo">
+                        <div class="infoTriangle"></div>
+                        <p class="kostenUpgrade">Kosten: <span>50</span> clickers</p>
+                        <p class="info">Produziert jede Sekunde 1 clicker</p>
+                    </div>
+                </div>
+                <div class="fabrikUpgradeWrapper">
+                    <div class="infoTriggerButton">?</div>
+                    <div class="upgradeNode">+1 Ara Ara</div>
+                    <div class="infoNode fabrikInfo">
+                        <div class="infoTriangle"></div>
+                        <p class="kostenUpgrade">Kosten: <span>200</span> clickers</p>
+                        <p class="info">Produziert jede Sekunde 5 clickers</p>
+                    </div>
+                </div>
+                <div class="portalUpgradeWrapper">
+                    <div class="infoTriggerButton">?</div>
+                    <div class="upgradeNode">+1 Sugoi</div>
+                    <div class="infoNode portalInfo">
+                        <div class="infoTriangle"></div>
+                        <p class="kostenUpgrade">Kosten: <span>1000</span> clickers</p>
+                        <p class="info">Produziert jede Sekunde 20 clickers</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fehler Konsole -->
+            <h2>Fehler Protokoll:</h2>
+            <div class="console"></div>
+        </div>
     </div>
-    <div id="score">0</div>
-    <div class="highscore">
-      Highscore: <span id="highscore-value">0</span>
+    <div class="map">
+        <h2>Gesammelte Upgrades:</h2>
+        <div class="bauernKarte">
+
+        </div>
+        <div class="fabrikKarte">
+
+        </div>
+        <div class="portalKarte">
+
+        </div>
     </div>
-
-
-    <script src="assets/js/game.js"></script>
-  </body>
+    <!-- Buttons Speicher, zurücksetzten, Hintergrund ändern -->
+    <div class="buttonWrapper">
+        <div id="saveButton">Status Speichern</div>
+        <div id="resetButton">Spiel zurücksetzen</div>
+    </div>
+</body>
 
 </html>
