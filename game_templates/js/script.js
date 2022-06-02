@@ -53,10 +53,26 @@
             var countPortal = 0;
         }
 
-        // Portale des voreherigen Speicherstandes erstellen
+        if (localStorage.amountStar) {
+            var amountStar = Number(localStorage.amountStar);
+        } else {
+            var amountStar = 0;
+        }
+        if (localStorage.countStar) {
+            var countStar = Number(localStorage.countStar);
+        } else {
+            var countStar = 0;
+        }
+
+        // Portale und Sterne des voreherigen Speicherstandes erstellen
         for (i = 0; i < countPortal; i++) {
             $('.portalKarte').append('<img class="portal" src="game_templates/img/portal.png">');
         }
+
+        for (i = 0; i < countStar; i++) {
+            $('.starKarte').append('<img class="star" src="game_templates/img/ara.png">');
+        }
+
         // Restliche Variabeln definieren
         if (localStorage.masterclickerCount) {
             var masterclickerCount = Number(localStorage.masterclickerCount);
@@ -98,6 +114,13 @@
             var upgradePortalCost = 1000;
         }
 
+        if (localStorage.upgradeStarCost) {
+            var upgradeStarCost = Number(localStorage.upgradeStarCost);
+            
+        } else {
+            var upgradeStarCost = 10000;
+        }
+
         if (localStorage.amountReload) {
             var amountReload = Number(localStorage.amountReload)
             amountReload = amountReload + 1;
@@ -109,6 +132,7 @@
         $('.bauerUpgradeWrapper .kostenUpgrade span').text(upgradeBauerCost);
         $('.fabrikUpgradeWrapper .kostenUpgrade span').text(upgradeFabrikCost);
         $('.portalUpgradeWrapper .kostenUpgrade span').text(upgradePortalCost);
+        $('.starUpgradeWrapper .kostenUpgrade span').text(upgradeStarCost);
         // Geheimes Upgrade welches nurch durch eine bestimmte Kompination ausgeführt wird
         if (amountBauern >= 3 && clickercount > 1000 && amountReload > 3) {
             $(".bauernKarte").empty();
@@ -141,12 +165,15 @@
             localStorage.setItem('countFabrik', countFabrik);
             localStorage.setItem('amountPortal', amountPortal);
             localStorage.setItem('countPortal', countPortal);
+            localStorage.setItem('amountStar', amountStar);
+            localStorage.setItem('countStar', countStar);
             localStorage.setItem('masterclickerCount', masterclickerCount);
             localStorage.setItem('masterClickCount', masterClickCount);
             localStorage.setItem('upgradeClickCountCost', upgradeClickCountCost);
             localStorage.setItem('upgradeBauerCost', upgradeBauerCost);
             localStorage.setItem('upgradeFabrikCost', upgradeFabrikCost);
             localStorage.setItem('upgradePortalCost', upgradePortalCost);
+            localStorage.setItem('upgradeStarCost', upgradeStarCost);
             localStorage.setItem('amountReload', amountReload);
         }
 
@@ -316,6 +343,42 @@
         setInterval(function () {
             if (amountPortal > 0) {
                 clickercount = clickercount + amountPortal;
+            } else {
+
+            }
+        }, 1000);
+
+        // fünftes Upgrade
+        // clicker pro Sekunde + 20
+        $('.spanStarValue').text(amountStar)
+        $('.starUpgradeWrapper .upgradeNode').click(function () {
+            console.log(upgradeStarCost)
+            if (clickercount >= upgradeStarCost) { // wen man genug clickers besitzt
+                console.log("F")
+                amountStar = amountStar + 100;
+                countStar = countStar + 1;
+                clickercount = clickercount - upgradeStarCost; // Kosten berechnen
+
+                upgradeStarCost = upgradeStarCost * 1.25; // kosten erhöhen
+                upgradeStarCost = Math.round(upgradeStarCost / 5) * 5; // kosten immer auf 05 oder ganze Zahlen runden
+
+                $('.starUpgradeWrapper .kostenUpgrade span').text(upgradeStarCost); // Statistik updaten
+                $('.spanStarValue').text(amountStar); // Kosten in der Info Box updaten
+
+                $('.starKarte').append('<img class="star" src="game_templates/img/ara.png">') // star erstellen in der Karte
+            } else { // wen man zu wenig clickers
+                var clickerDiffrence = upgradeStarCost - clickercount;
+            //    alert("Du hast nicht genügend clickers: dir fehlen " + clickerDiffrence + " clickers")
+                var hours = (new Date()).getHours();
+                var minutes = (new Date()).getMinutes();
+                var seconds = (new Date()).getSeconds();
+                $('.console').append('<p><span>' + hours + ':' + minutes + ':' + seconds + ' Uhr' + ' ></span> Du hast nicht genügend Clicks: dir fehlen ' + clickerDiffrence + ' Clicks um einen Stern zu kaufen.</p>')
+            }
+        })
+
+        setInterval(function () {
+            if (amountStar > 0) {
+                clickercount = clickercount + amountStar;
             } else {
 
             }

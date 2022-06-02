@@ -119,6 +119,7 @@ img.clicker:active {
 .spanBauernValue,
 .spanFabrikValue,
 .spanPortalValue,
+.spanStarValue,
 .spanclicker,
 .amount {
     color: #D9AC61;
@@ -211,7 +212,7 @@ img.clicker:active {
 }
 
 .upgrades>div {
-    margin-left: 5rem;
+    margin-right: 0.5rem;
     height: max-content;
     margin-bottom: 1rem;
 }
@@ -361,7 +362,8 @@ img.clicker:active {
 
 .bauernKarte,
 .fabrikKarte,
-.portalKarte {
+.portalKarte,
+.starKarte {
     height: 50px;
     background-color: #58649B;
     border: solid 5px #3F3D48;
@@ -374,7 +376,8 @@ img.clicker:active {
 }
 
 .fabrikKarte,
-.portalKarte {
+.portalKarte,
+.starKarte {
     border-top: none
 }
 
@@ -417,6 +420,16 @@ img.clicker:active {
     transform: translateY(5%);
 }
 
+.star {
+    height: 30px;
+    transform: translateY(20%);
+    margin-right: 5px;
+}
+
+.star:nth-child(2n) {
+    transform: translateY(5%);
+}
+
 @media only screen and (max-width: 600px) {
 
     .buttonWrapper div {
@@ -428,6 +441,6 @@ img.clicker:active {
     }
 }
 
-.clickUpgradeWrapper, .bauerUpgradeWrapper, .fabrikUpgradeWrapper, .portalUpgradeWrapper {
+.clickUpgradeWrapper, .bauerUpgradeWrapper, .fabrikUpgradeWrapper, .portalUpgradeWrapper, .starUpgradeWrapper {
     margin-left: 0px;
 }
