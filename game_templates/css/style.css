@@ -123,6 +123,7 @@ img.clicker:active {
 .spanclicker,
 .amount {
     color: #D9AC61;
+    margin-left: 0.5rem;
 }
 
 .console p {
