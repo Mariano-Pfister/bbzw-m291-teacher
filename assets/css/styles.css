@@ -123,6 +123,7 @@ h2 {
 }
 .buttonShop:hover{
     background-color: #F21861;
+    color: white;
 }
 .productList .product {
     width: 20%;
