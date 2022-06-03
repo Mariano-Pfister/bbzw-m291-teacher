@@ -106,7 +106,24 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
 }
-
+.buttonShop{
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 50px;
+    max-width: 250px;
+    padding: 15px;
+    background-color: #CE0E44;
+    color: white;
+    transition: .2s ease-out;
+}
+.buttonShop:visited{
+    color: white;
+}
+.buttonShop:hover{
+    background-color: #F21861;
+}
 .productList .product {
     width: 20%;
     margin-right: 5%;
