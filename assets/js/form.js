@@ -10,6 +10,26 @@ const validate = () => {
     }
 }
 
+function isValidFirstname(fname) {
+    if (
+        typeof fname !== "string" ||
+        /[0-9]+/g.test(fname)
+    ) {
+        return false; 
+    }
+    return true;
+}
+
+function isValidLastname(lname) {
+    if (
+        typeof lname !== "string" ||
+        /[0-9]+/g.test(lname)
+    ) {
+        return false; 
+    }
+    return true;
+}
+
 email.addEventListener("keyup", (event) => {
     validate()
 })
