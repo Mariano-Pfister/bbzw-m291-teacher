@@ -1,15 +1,24 @@
 /* Standart Formate afu 0 setzten  */
 * {
+    font-family: 'Munro';
     position: relative;
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+    font-family: 'Munro';
+    src: url('../font/Munro.woff2') format('woff2'),
+    url('../font/Munro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-style: normal;
+    font-family: 'Munro';
     font-size: 20px;
     background-color: #3F3D48;
     user-select: none;
@@ -36,15 +45,10 @@ h2 {
     }
 }
 
-/* ---------- Begin .rotating-border ---------- */
-@keyframes spin {
-    from {
-        transform: translate(-50%, -50%) rotate(0);
-    }
-
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
+.clicktext {
+    margin: 0 0 10px 0;
+    color: #ffffff;
+    text-align: center;
 }
 
 /* Cookie Bild  */
@@ -56,27 +60,12 @@ img.clicker {
     max-width: 350px;
     transition: transform 0.25s ease-in-out;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 60% 40% 40% 20% / 70% 50% 30% 25%;
 }
 
 @media only screen and (max-width: 768px) {
     img.clicker {
         max-width: 200px;
-    }
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .img.clicker {
         margin-left: auto;
         text-align: center;
     }
@@ -88,7 +77,7 @@ img.clicker {
 
 img.clicker:active {
     transform: scale(0.9);
-    animation: none;
+    outline: none;
 }
 
 /* Fehlerkonsole */
