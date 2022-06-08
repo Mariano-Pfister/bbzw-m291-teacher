@@ -61,6 +61,7 @@ h2 {
 .wrapperSmall {
     max-width: 800px;
     margin: auto;
+    display: contents;
 }
 
 .wrapper {
@@ -162,20 +163,39 @@ h2 {
 }
 
 input[type=text],
-input[type=email] {
+input[type=email],
+input[type=plz],
+input[type=ort],
+input[type=tel] {
     all: unset;
+    height: 30px;
+    display: block;
 }
 
-input[type=text],
-input[type=email] {
+input[type=submit],
+input[type=reset] {
+    all: unset;
     height: 30px;
-    background: white;
-    padding: 5px;
+    padding: 5px 10px;
+    color: #ffffff;
+    background-color: #CE0E44;
+    transition: ease-in-out 250ms;
+}
+
+input[type=submit]:hover,
+input[type=reset]:hover {
+    background: #F21861;
+    cursor: pointer;
 }
 
 form {
     display: flex;
     flex-wrap: wrap;
+}
+
+.formLead {
+    padding: 0 0 40px 0;
+    width: 100%;
 }
 
 form label {
