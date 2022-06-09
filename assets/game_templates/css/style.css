@@ -143,8 +143,7 @@ img.clicker {
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 2rem;
-    height: 50vh;
-    max-height: 50vh;
+    height: 350px;
     max-width: 350px;
     transition: transform 0.25s ease-in-out;
     cursor: pointer;
