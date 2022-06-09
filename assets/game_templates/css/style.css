@@ -85,10 +85,7 @@ body {
     transition: transform 0.3s ease-in-out;
   }
   .menu:hover .menu-circle {
-    transform: scale(1.3);
-  }
-  .menu.open .menu-circle {
-    transform: scale(100);
+    transform: scale(1.1);
   }
   
   .menu-overlay {
@@ -106,9 +103,10 @@ body {
   .menu-overlay.open {
     opacity: 1;
     visibility: visible;
-    margin: 0;
+    position: absolute;
     height: 100%;
-    overflow: hidden;
+    background-color: #fff;
+    height: 80vh;
   }
 
 h1 {
