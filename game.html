@@ -8,33 +8,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--  Files integriegren  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="game_templates/css/style.css">
-    <script type="text/javascript" src="game_templates/js/script.js"></script>
+    <link rel="stylesheet" href="assets/game_templates/css/style.css">
+    <script type="text/javascript" src="assets/game_templates/js/script.js"></script>
     <!-- Favicon Icons laden  -->
-    <link rel="apple-touch-icon" sizes="180x180" href="game_templates/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="game_templates/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="game_templates/favicons/favicon-16x16.png">
-    <link rel="manifest" href="game_templates/favicons/site.webmanifest">
-    <link rel="mask-icon" href="game_templates/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/game_templates/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/game_templates/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/game_templates/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/game_templates/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/game_templates/favicons/safari-pinned-tab.svg" color="#000000">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="preload" href="assets/game_templates/font/Munro.woff2" as="font" type="font/woff2" crossorigin>
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#f7f7f7">
 </head>
 
 <body>
     <h1>WAIFU4LIFE CLICKER</h1>
+
+    <div class="menu">
+        <span class="menu-circle"></span>
+        <a href="#" class="menu-link">
+            <span class="menu-icon">
+                <span class="menu-line menu-line-1"></span>
+                <span class="menu-line menu-line-2"></span>
+                <span class="menu-line menu-line-3"></span>
+            </span>
+        </a>
+    </div>
+    <div class="menu-overlay">
+        <div class="clickUpgradeWrapper">
+            <p class="kostenUpgrade">Kosten für nächstes <i class="far fa-hand-pointer"></i> Upgrade: <span>10</span> clickers</p>
+            <p class="info">Du erhälst 1 clicker pro Klick mehr wenn du dieses Upgrade machst.</p>
+        </div>
+        <div class="bauerUpgradeWrapper">
+            <p class="kostenUpgrade">Kosten für nächstes <i class="far fa-heart"></i> Upgrade: <span>50</span> clickers</p>
+            <p class="info">Produziert jede Sekunde 1 clicker</p>
+        </div>
+        <div class="fabrikUpgradeWrapper">
+            <p class="kostenUpgrade">Kosten für nächstes <i class="far fa-moon"></i> Upgrade: <span>200</span> clickers</p>
+            <p class="info">Produziert jede Sekunde 5 clickers</p>
+        </div>
+        <div class="portalUpgradeWrapper">
+            <p class="kostenUpgrade">Kosten für nächstes <i class="far fa-star"></i> Upgrade: <span>1000</span> clickers</p>
+            <p class="info">Produziert jede Sekunde 20 clickers</p>
+        </div>
+        <div class="starUpgradeWrapper">
+            <p class="kostenUpgrade">Kosten für nächstes <i class="far fa-paper-plane"></i> Upgrade: <span>10000</span> clickers</p>
+            <p class="info">Produziert jede Sekunde 100 clickers</p>
+        </div>
+    </div>
+
     <div class="bodyWrapper">
+
         <div class="bodyWrapperLeft">
 
             <!-- Anzahl clickers -->
             <div class="amount"></div>
 
+            <div class="clicktext">Click on me</div>
             <!-- clicker -->
             <div class="clicker_img">
-                <div class="rotating-border rotating-border--google">
-                    <img class="clicker" src="game_templates/img/roxy-migurdia.gif"
-                        onclick="playAudio('audio/audio.mp3')">
-                </div>
+                <img class="clicker clickImg" src="assets/game_templates/img/roxy_migurdia_v2.png"
+                    onclick="playAudio('assets/game_templates/audio/audio.mp3')">
             </div>
+
+            <!-- Fehler Konsole -->
+            <h2>Fehler Protokoll:</h2>
+            <div class="console"></div>
 
         </div>
         <div class="bodyWrapperRight">
@@ -48,91 +88,73 @@
                     </div>
                     <br>
                     <div>
-                        <span>Total clickers pro Klick: </span><span class="spanClicksValue">1</span><br>
+                        <span>Total clickers pro </span><i class="far fa-hand-pointer"></i><span
+                            class="spanClicksValue">1</span><br>
                     </div>
                     <div>
-                        <div class="clickUpgradeWrapper">
-                            <div class="infoTriggerButton">?</div>
-                            <div class="infoNode clickInfo">
-                                <div class="infoTriangle"></div>
-                                <p class="kostenUpgrade">Kosten: <span>10</span> clickers</p>
-                                <p class="info">Du erhälst 1 clicker pro Klick mehr wenn du dieses Upgrade machst.</p>
-                            </div>
-                        </div>
-                        <span>Clicks pro Sekunde durch uwu's: </span><span class="spanBauernValue">0</span>
-                        <br>
+                        <span>Clicks pro Sekunde durch </span><i class="far fa-heart"></i><span
+                            class="spanBauernValue">0</span><br>
                     </div>
                     <div>
-                        <span>Clicks pro Sekunde durch Ara Ara's: </span><span class="spanFabrikValue">0</span><br>
+                        <span>Clicks pro Sekunde durch </span><i class="far fa-moon"></i><span
+                            class="spanFabrikValue">0</span><br>
                     </div>
                     <div>
-                        <span>Clicks pro Sekunde durch Sugoi's: </span><span class="spanPortalValue">0</span><br>
+                        <span>Clicks pro Sekunde durch </span><i class="far fa-star"></i><span
+                            class="spanPortalValue">0</span><br>
+                    </div>
+                    <div>
+                        <span>Clicks pro Sekunde durch </span><i class="far fa-paper-plane"></i><span
+                            class="spanStarValue">0</span><br>
                     </div>
                 </p>
             </div>
 
-            <!--  Upgrades  -->
-            <div class="upgrades">
-                <div class="clickUpgradeWrapper">
-                    <div class="infoTriggerButton">?</div>
-                    <div class="upgradeNode">+1 clicker pro Klick</div>
-                    <div class="infoNode clickInfo">
-                        <div class="infoTriangle"></div>
-                        <p class="kostenUpgrade">Kosten: <span>10</span> clickers</p>
-                        <p class="info">Du erhälst 1 clicker pro Klick mehr wenn du dieses Upgrade machst.</p>
-                    </div>
+            <div class="map">
+                <h2>Gesammelte Upgrades:</h2>
+                <div class="bauernKarte">
+
                 </div>
-                <div class="bauerUpgradeWrapper">
-                    <div class="infoTriggerButton">?</div>
-                    <div class="upgradeNode">+1 uwu </div>
-                    <div class="infoNode bauerInfo">
-                        <div class="infoTriangle"></div>
-                        <p class="kostenUpgrade">Kosten: <span>50</span> clickers</p>
-                        <p class="info">Produziert jede Sekunde 1 clicker</p>
-                    </div>
+                <div class="fabrikKarte">
+
                 </div>
-                <div class="fabrikUpgradeWrapper">
-                    <div class="infoTriggerButton">?</div>
-                    <div class="upgradeNode">+1 Ara Ara</div>
-                    <div class="infoNode fabrikInfo">
-                        <div class="infoTriangle"></div>
-                        <p class="kostenUpgrade">Kosten: <span>200</span> clickers</p>
-                        <p class="info">Produziert jede Sekunde 5 clickers</p>
-                    </div>
+                <div class="portalKarte">
+
                 </div>
-                <div class="portalUpgradeWrapper">
-                    <div class="infoTriggerButton">?</div>
-                    <div class="upgradeNode">+1 Sugoi</div>
-                    <div class="infoNode portalInfo">
-                        <div class="infoTriangle"></div>
-                        <p class="kostenUpgrade">Kosten: <span>1000</span> clickers</p>
-                        <p class="info">Produziert jede Sekunde 20 clickers</p>
-                    </div>
+                <div class="starKarte">
+
                 </div>
             </div>
-
-            <!-- Fehler Konsole -->
-            <h2>Fehler Protokoll:</h2>
-            <div class="console"></div>
+            <!-- Buttons Speicher, zurücksetzten, Hintergrund ändern -->
+            <div class="buttonWrapper">
+                <div id="saveButton">Status Speichern</div>
+                <div id="resetButton">Spiel zurücksetzen</div>
+            </div>
         </div>
+
+        <!--  Upgrades  -->
+        <div class="upgrades">
+
+            <div class="clickUpgradeWrapper">
+                <div class="upgradeNode">+1 <i class="far fa-hand-pointer"></i></div>
+            </div>
+            <div class="bauerUpgradeWrapper">
+                <div class="upgradeNode">+1 <i class="far fa-heart"></i></div>
+            </div>
+            <div class="fabrikUpgradeWrapper">
+                <div class="upgradeNode">+1 <i class="far fa-moon"></i></div>
+            </div>
+            <div class="portalUpgradeWrapper">
+                <div class="upgradeNode">+1 <i class="far fa-star"></i></div>
+            </div>
+            <div class="starUpgradeWrapper">
+                <div class="upgradeNode">+1 <i class="far fa-paper-plane"></i></div>
+            </div>
+        </div>
+
     </div>
-    <div class="map">
-        <h2>Gesammelte Upgrades:</h2>
-        <div class="bauernKarte">
 
-        </div>
-        <div class="fabrikKarte">
 
-        </div>
-        <div class="portalKarte">
-
-        </div>
-    </div>
-    <!-- Buttons Speicher, zurücksetzten, Hintergrund ändern -->
-    <div class="buttonWrapper">
-        <div id="saveButton">Status Speichern</div>
-        <div id="resetButton">Spiel zurücksetzen</div>
-    </div>
 </body>
 
 </html>
