@@ -18,7 +18,7 @@ $(document).ready(function () {
         var clickercount = Number(localStorage.clickercount);
     } else {
         // variabel neu erstellt
-        var clickercount = 0;
+        var clickercount = 9990;
     }
 
     if (localStorage.addCountClick) {
