@@ -50,6 +50,7 @@ function printError(elemId, hintMsg) {
     var vornameErr = nachnameErr = ortErr = plzErr = emailErr = telErr = agbErr = true;
   
     // Validiere Vorname
+      /*
     if (vorname == "") {
       printError("vornameErr", "Bitte gib deinen Vornamen ein");
     } else {
@@ -60,7 +61,7 @@ function printError(elemId, hintMsg) {
         printError("vornameErr", "");
         vornameErr = false;
       }
-    }
+    }*/
   
     // Validiere Nachname
     if (nachname == "") {
