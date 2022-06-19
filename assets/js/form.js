@@ -1,5 +1,6 @@
 var submitForm = document.getElementById("submit");
 var email = document.getElementById("email");
+var vorname = document.getElementById("vorname");
 /*submitForm.disabled = true;
 const validate = () => {
     if (email.value == "") {
@@ -15,7 +16,7 @@ email.addEventListener("keyup", (event) => {
 submitForm.addEventListener("click", async (event) => {
     console.log('1')
     event.preventDefault()
-  const result = await databaseClient.insertInto("users", ["email"], [email.value])
+  const result = await databaseClient.insertInto(["email", "vorname"], [email.value, vorname.value])
   if (result.error) {
     alert("Datenbank Fehler: " + JSON.stringify(result.error, null, 2))
   }
