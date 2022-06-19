@@ -1,18 +1,18 @@
-const submit = document.getElementById("submit");
-const email = document.getElementById("email");
-submit.disabled = true;
+var submitForm = document.getElementById("submit");
+var email = document.getElementById("email");
+submitForm.disabled = true;
 const validate = () => {
     if (email.value == "") {
-        submit.disabled = true
+        submitForm.disabled = true
     } else {
-        submit.disabled = false
+        submitForm.disabled = false
     }
 }
 email.addEventListener("keyup", (event) => {
     validate()
 })
 
-submit.addEventListener("click", async (event) => {
+submitForm.addEventListener("click", async (event) => {
   event.preventDefault()
   const result = await databaseClient.insertInto("users", ["email"], [email.value])
   if (result.error) {
