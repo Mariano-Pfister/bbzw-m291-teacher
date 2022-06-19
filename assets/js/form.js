@@ -1,6 +1,6 @@
-const submit = document.getElementById("submit")
-const email = document.getElementById("email")
-submit.disabled = true
+const submit = document.getElementById("submit");
+const email = document.getElementById("email");
+submit.disabled = true;
 const validate = () => {
     if (email.value == "") {
         submit.disabled = true
