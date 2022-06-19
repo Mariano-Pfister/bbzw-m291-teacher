@@ -1,4 +1,4 @@
-var submit = document.getElementById("submit");
+var submitForm = document.getElementById("submit");
 var email = document.getElementById("email");
 var vorname = document.getElementById("vorname");
 
