@@ -6,7 +6,6 @@ var ort = document.getElementById("ort");
 var plz = document.getElementById("plz");
 var tel = document.getElementById("tel");
 
-submitForm.disabled = true;
 const validate = () => {
     if (email.value == "") {
         submitForm.disabled = true
