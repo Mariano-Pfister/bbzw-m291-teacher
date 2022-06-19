@@ -22,8 +22,9 @@ const validate = () => {
             printError("vornameErr", "Bitte keine Zahlen und Sonderzeichen");
         } else {
             printError("vornameErr", "");
-            console.log("2")
         }
+        console.log("2")
+
     }
     // Validiere Nachname
     if (nachname.value == "") {
@@ -34,9 +35,10 @@ const validate = () => {
             submitForm.disabled = true
         } else {
             submitForm.disabled = false
-            console.log("2")
 
         }
+        console.log("2")
+
     }
 
     // Validiere Adresse
@@ -48,8 +50,9 @@ const validate = () => {
             submitForm.disabled = true
         } else {
             submitForm.disabled = false
-            console.log("2")
         }
+        console.log("2")
+
     }
 
     // Validiere PLZ
@@ -61,9 +64,9 @@ const validate = () => {
             submitForm.disabled = true
         } else {
             submitForm.disabled = false
-            console.log("2")
-
         }
+        console.log("2")
+
     }
 
     // Validiere email Adresse
@@ -75,9 +78,9 @@ const validate = () => {
             submitForm.disabled = true
         } else {
             submitForm.disabled = false
-            console.log("2")
-
         }
+        console.log("2")
+
     }
 
     // Validiere mobile Nummer
@@ -89,9 +92,8 @@ const validate = () => {
             submitForm.disabled = true
         } else {
             submitForm.disabled = false
-            console.log("2")
-
         }
+        console.log("2")
     }
 }
 email.addEventListener("keyup", (event) => {
