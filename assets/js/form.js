@@ -1,5 +1,5 @@
 var submitForm = document.getElementById("submit");
-var email = document.getElementById("email");
+/*var email = document.getElementById("email");
 submitForm.disabled = true;
 const validate = () => {
     if (email.value == "") {
@@ -10,7 +10,7 @@ const validate = () => {
 }
 email.addEventListener("keyup", (event) => {
     validate()
-})
+})*/
 
 submitForm.addEventListener("click", async (event) => {
   event.preventDefault()
