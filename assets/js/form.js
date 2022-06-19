@@ -6,7 +6,7 @@ var ort = document.contactForm.ort.value;
 var plz = document.contactForm.plz.value;
 var tel = document.contactForm.tel.value;
 
-/*submitForm.disabled = true;
+submitForm.disabled = true;
 const validate = () => {
     if (email.value == "") {
         submitForm.disabled = true
@@ -16,7 +16,7 @@ const validate = () => {
 }
 email.addEventListener("keyup", (event) => {
     validate()
-})*/
+})
 
 submitForm.addEventListener("click", async (event) => {
     console.log('1')
