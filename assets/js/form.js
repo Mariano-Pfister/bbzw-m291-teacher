@@ -1,10 +1,10 @@
 var submitForm = document.getElementById("submit");
 var email = document.getElementById("email");
-var vorname = document.contactForm.vorname.value;
-var nachname = document.contactForm.nachname.value;
-var ort = document.contactForm.ort.value;
-var plz = document.contactForm.plz.value;
-var tel = document.contactForm.tel.value;
+var vorname = document.getElementById("vorname");
+var nachname = document.getElementById("nachname");
+var ort = document.getElementById("ort");
+var plz = document.getElementById("plz");
+var tel = document.getElementById("tel");
 
 submitForm.disabled = true;
 const validate = () => {
@@ -92,7 +92,7 @@ email.addEventListener("keyup", (event) => {
 submitForm.addEventListener("click", async (event) => {
     console.log('1')
     event.preventDefault()
-    const result = await databaseClient.insertInto("users", ["email", "vorname", "nachname", "ort", "plz", "telefonnummer"], [email.value, vorname, nachname, ort, plz, tel])
+    const result = await databaseClient.insertInto("users", ["email", "vorname", "nachname", "ort", "plz", "telefonnummer"], [email.value, vorname.value, nachname.value, ort.value, plz.value, tel.value])
     if (result.error) {
         alert("Datenbank Fehler: " + JSON.stringify(result.error, null, 2))
     }
