@@ -5,14 +5,14 @@ var nachname = document.getElementById("nachname");
 var ort = document.getElementById("ort");
 var plz = document.getElementById("plz");
 var tel = document.getElementById("tel");
-
+/*
 const validate = () => {
     if (email.value == "") {
         submitForm.disabled = true
     } else {
         submitForm.disabled = false
     }
-/*
+
     if (vorname.value == "") {
         submitForm.disabled = true
     } else {
