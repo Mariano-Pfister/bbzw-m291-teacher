@@ -38,6 +38,7 @@ const databaseClient = {
     insertInto: async (tableName = "users", fields = ["email"], values = []) => {
       const sql = `INSERT INTO ${tableName} (${fields.join(",")}) VALUES ('${values.join("','")}')`
       return await databaseClient.executeSqlQuery(sql)
+        console.log('2')
     }
   }
 
