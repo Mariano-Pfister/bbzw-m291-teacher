@@ -22,7 +22,7 @@ const validate = () => {
             printError("vornameErr", "Bitte keine Zahlen und Sonderzeichen");
         } else {
             printError("vornameErr", "");
-            vornameErr = false;
+            console.log("2")
         }
     }
     // Validiere Nachname
@@ -34,6 +34,8 @@ const validate = () => {
             submitForm.disabled = true
         } else {
             submitForm.disabled = false
+            console.log("2")
+
         }
     }
 
@@ -46,6 +48,7 @@ const validate = () => {
             submitForm.disabled = true
         } else {
             submitForm.disabled = false
+            console.log("2")
         }
     }
 
@@ -58,6 +61,8 @@ const validate = () => {
             submitForm.disabled = true
         } else {
             submitForm.disabled = false
+            console.log("2")
+
         }
     }
 
@@ -70,6 +75,8 @@ const validate = () => {
             submitForm.disabled = true
         } else {
             submitForm.disabled = false
+            console.log("2")
+
         }
     }
 
@@ -82,6 +89,8 @@ const validate = () => {
             submitForm.disabled = true
         } else {
             submitForm.disabled = false
+            console.log("2")
+
         }
     }
 }
