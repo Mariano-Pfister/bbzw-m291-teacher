@@ -35,10 +35,9 @@ const databaseClient = {
 
     // Mitgegeben wird der Name der Tabelle als String, die Felder als Array und die Werte als Array.
     // Beispiel: databaseClient.insertInto("customers", ["firstname", "email"], [firstname.value, email.value])
-    insertInto: async (tableName = "users", fields = ["email"], values = []) => {
+    insertInto: async (tableName = "users", fields = ["email", "vorname", "nachname", "ort", "plz", "telefonnummer"], values = []) => {
       const sql = `INSERT INTO ${tableName} (${fields.join(",")}) VALUES ('${values.join("','")}')`
       return await databaseClient.executeSqlQuery(sql)
-        console.log('2')
     }
   }
 
