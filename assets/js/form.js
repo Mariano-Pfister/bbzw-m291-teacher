@@ -14,11 +14,11 @@ const validate = () => {
         submitForm.disabled = false
     }
     // Validiere Vorname
-    if (vorname == "") {
+    if (vorname.value == "") {
         submitForm.disabled = true
     } else {
         var regex = /^[a-zA-Z äÄöÖüÜ]{1,}$/;
-        if (regex.test(vorname) === false) {
+        if (regex.test(vorname.value) === false) {
             printError("vornameErr", "Bitte keine Zahlen und Sonderzeichen");
         } else {
             printError("vornameErr", "");
@@ -26,11 +26,11 @@ const validate = () => {
         }
     }
     // Validiere Nachname
-    if (nachname == "") {
+    if (nachname.value == "") {
         submitForm.disabled = true
     } else {
         var regex = /^[a-zA-Z äÄöÖüÜ]{1,}$/;
-        if (regex.test(nachname) === false) {
+        if (regex.test(nachname.value) === false) {
             submitForm.disabled = true
         } else {
             submitForm.disabled = false
@@ -38,11 +38,11 @@ const validate = () => {
     }
 
     // Validiere Adresse
-    if (ort == "") {
+    if (ort.value == "") {
         submitForm.disabled = true
     } else {
         var regex = /^[a-zA-Z äÄöÖüÜ 0-9 ]{2,}$/;
-        if (ort.length > 50) {
+        if (ort.value.length > 50) {
             submitForm.disabled = true
         } else {
             submitForm.disabled = false
@@ -50,11 +50,11 @@ const validate = () => {
     }
 
     // Validiere PLZ
-    if (plz == "") {
+    if (plz.value == "") {
         submitForm.disabled = true
     } else {
         var regex = /^[0-9]{4,}$/;
-        if (plz.length !== 4) {
+        if (plz.value.length !== 4) {
             submitForm.disabled = true
         } else {
             submitForm.disabled = false
@@ -74,11 +74,11 @@ const validate = () => {
     }
 
     // Validiere mobile Nummer
-    if (tel == "") {
+    if (tel.value == "") {
         submitForm.disabled = true
     } else {
         var regex = /^[0-9 +]{5,}$/;
-        if (tel.length > 15) {
+        if (tel.value.length > 15) {
             submitForm.disabled = true
         } else {
             submitForm.disabled = false
