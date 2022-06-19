@@ -1,6 +1,6 @@
 var submitForm = document.getElementById("submit");
-/*var email = document.getElementById("email");
-submitForm.disabled = true;
+var email = document.getElementById("email");
+/*submitForm.disabled = true;
 const validate = () => {
     if (email.value == "") {
         submitForm.disabled = true
