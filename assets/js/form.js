@@ -13,7 +13,7 @@ const validate = () => {
     } else {
         submitForm.disabled = false
     }
-    // Validiere Vorname
+/*
     if (vorname.value == "") {
         submitForm.disabled = true
     } else {
@@ -94,7 +94,7 @@ const validate = () => {
             submitForm.disabled = false
         }
         console.log("2")
-    }
+    }*/
 }
 email.addEventListener("keyup", (event) => {
     validate()
