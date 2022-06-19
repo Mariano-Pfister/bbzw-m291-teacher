@@ -14,9 +14,9 @@ const databaseClient = {
       pw: "9da61b5f",
       sql: ""
     },
-  
+
     // HTTP Request an die Datenbank
-    // Mitgegeben wird ein SQL Query als String 
+    // Mitgegeben wird ein SQL Query als String
     executeSqlQuery: async (sql) => {
       databaseClient.data.sql = sql
       const response = await fetch(databaseClient.data.url, {
@@ -29,10 +29,10 @@ const databaseClient = {
       })
       const result = await response.json()
       console.log("SQL Query executed: ", result, sql)
-      
+
       return result
     },
-  
+
     // Mitgegeben wird der Name der Tabelle als String, die Felder als Array und die Werte als Array.
     // Beispiel: databaseClient.insertInto("customers", ["firstname", "email"], [firstname.value, email.value])
     insertInto: async (tableName = "users", fields = ["email"], values = []) => {
@@ -40,3 +40,6 @@ const databaseClient = {
       return await databaseClient.executeSqlQuery(sql)
     }
   }
+
+
+
