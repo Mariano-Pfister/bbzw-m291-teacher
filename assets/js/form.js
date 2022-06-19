@@ -21,7 +21,7 @@ email.addEventListener("keyup", (event) => {
 submitForm.addEventListener("click", async (event) => {
     console.log('1')
     event.preventDefault()
-    const result = await databaseClient.insertInto("users", ["email"], [email.value], "users", ["vorname"], [vorname])
+    const result = await databaseClient.insertInto("users", ["email", "vorname", "nachname", "ort", "plz", "telefonnummer"], [email.value, vorname, nachname, ort, plz, tel])
     if (result.error) {
         alert("Datenbank Fehler: " + JSON.stringify(result.error, null, 2))
     }
