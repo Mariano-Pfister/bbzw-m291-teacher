@@ -193,28 +193,28 @@
         </div>
         <div class="row">
           <label>Vorname: </label>
-          <input type="text" name="vorname" pattern="[a-zA-Z äÄöÖüÜ]{1,}" maxlength="30"
+          <input type="text" id="vorname" name="vorname" pattern="[a-zA-Z äÄöÖüÜ]{1,}" maxlength="30"
             title="Bitte keine Zahlen und Sonderzeichen" required>
           <div class="error" id="vornameErr"></div>
         </div>
 
         <div class="row">
           <label>Nachname: </label>
-          <input type="text" name="nachname" pattern="[a-zA-Z äÄöÖüÜ]{1,}" maxlength="30"
+          <input type="text" id="nachname" name="nachname" pattern="[a-zA-Z äÄöÖüÜ]{1,}" maxlength="30"
             title="Bitte keine Zahlen und Sonderzeichen" required>
           <div class="error" id="nachnameErr"></div>
         </div>
 
         <div class="row">
           <label>Ort: </label>
-          <input type="ort" name="ort" pattern="[a-zA-Z äÄöÖüÜ 0-9 ]{2,}" maxlength="50"
+          <input type="ort" id="ort" name="ort" pattern="[a-zA-Z äÄöÖüÜ 0-9 ]{2,}" maxlength="50"
             title="Bitte eine reale Adresse eingeben" required>
           <div class="error" id="ortErr"></div>
         </div>
 
         <div class="row">
           <label>PLZ: </label>
-          <input type="plz" name="plz" pattern="[0-9]{4,}" maxlength="4" title="Bitte eine reale Postleitzahl eingeben"
+          <input type="plz" id="plz" name="plz" pattern="[0-9]{4,}" maxlength="4" title="Bitte eine reale Postleitzahl eingeben"
             required>
           <div class="error" id="plzErr"></div>
         </div>
@@ -222,13 +222,13 @@
         <div class="row">
           <label>Deine E-Mail Adresse: </label>
           <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-äÄöÖüÜ]+\.[a-z]{2,4}" maxlength="50"
-            title="Bitte eine reale E-Mail Adresse eingeben" id="email" required>
+            title="Bitte eine reale E-Mail Adresse eingeben" required>
           <div class="error" id="emailErr"></div>
         </div>
 
         <div class="row">
           <label>Deine Mobile Nummer: </label>
-          <input type="tel" name="tel" pattern="[0-9 +]{5,}" maxlength="20" title="Bitte nur Zahlen und +" required>
+          <input type="tel" id="tel" name="tel" pattern="[0-9 +]{5,}" maxlength="20" title="Bitte nur Zahlen und +" required>
           <div class="error" id="telErr"></div>
         </div>
 
