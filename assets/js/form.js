@@ -93,10 +93,10 @@ const validate = () => {
             submitForm.disabled = false
         }
         console.log("2")
-    }*/
+    }
 email.addEventListener("keyup", (event) => {
     validate()
-})
+})*/
 
 submitForm.addEventListener("click", async (event) => {
     console.log('1')
