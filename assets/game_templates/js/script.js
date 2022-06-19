@@ -1,3 +1,45 @@
+var email = document.getElementById("email");
+
+// Funktion um die Fehlermeldung darzustellen
+function printError(elemId, hintMsg) {
+    document.getElementById(elemId).innerHTML = hintMsg;
+  }
+  
+  // Funktion zur Validierung des Formulares
+  function validateForm() {
+  
+    // Den Variabeln Werte aus dem Formular zuweisen 
+    var email = document.contactForm.email.value;
+  
+    // Definiere Variabeln für Fehlermeldungen
+    var emailErr = true;
+  
+    // Validiere email Adresse
+    if (email == "") {
+      printError("emailErr", "Bitte E-Mail Adresse eingeben");
+    } else {
+      var regex = /^[0-9._%+-]+@[a-z0-9.-äÄöÖüÜ]+\.[a-z]{2,4}$/;
+      if (email.length > 50) {
+        printError("emailErr", "Bitte gültige E-Mail Adresse angeben");
+      } else {
+        printError("emailErr", "");
+        emailErr = false;
+      }
+    }
+
+    // Formular wird nicht gesendet, wenn etwas nicht richtig ausgefüllt ist
+    if (( emailErr ) == true) {
+      return false;
+    } else {
+      // Daten zusammenfassen
+      var dataPreview = "Folgende Daten wurden eingegeben: \n" +
+        "E-Mail Adresse: " + email + "\n";
+      // Daten ausgeben in Fenster
+      alert(dataPreview);
+    }
+  
+  };
+
 $(function () {
 
     $(".menu-link").click(function (e) {
@@ -10,6 +52,29 @@ $(function () {
 
 });
 
+$(function () {
+
+    $(".info-link").click(function (e) {
+        e.preventDefault();
+
+        $(".info-overlay").toggleClass("open");
+        $(".info").toggleClass("open");
+
+    });
+
+});
+
+window.onload = () => {
+    document.getElementById('exit').onclick = function() {
+        this.parentNode.remove()
+        return false;
+    };
+    document.getElementById('close').onclick = function() {
+        this.parentNode.remove()
+        return false;
+    };
+};
+
 $(document).ready(function () {
 
     // variablen
@@ -18,7 +83,7 @@ $(document).ready(function () {
         var clickercount = Number(localStorage.clickercount);
     } else {
         // variabel neu erstellt
-        var clickercount = 9990;
+        var clickercount = 999990;
     }
 
     if (localStorage.addCountClick) {
@@ -35,7 +100,7 @@ $(document).ready(function () {
 
     // Bauern des voreherigen Speicherstandes erstellen
     for (i = 0; i < amountBauern; i++) {
-        $('.bauernKarte').append('<img class="bauer" src="assets/game_templates/img/farmer.png">');
+        $('.bauernKarte').append('<img class="bauer" src="assets/game_templates/img/mha_manga.jpg">');
     }
 
     if (localStorage.amountFabrik) {
@@ -51,7 +116,7 @@ $(document).ready(function () {
 
     // Fabriken des voreherigen Speicherstandes erstellen
     for (i = 0; i < countFabrik; i++) {
-        $('.fabrikKarte').append('<img class="fabrik" src="assets/game_templates/img/factory.png">');
+        $('.fabrikKarte').append('<img class="fabrik" src="assets/game_templates/img/hutao_pillow.jpg">');
     }
 
     if (localStorage.amountPortal) {
@@ -78,11 +143,11 @@ $(document).ready(function () {
 
     // Portale und Sterne des voreherigen Speicherstandes erstellen
     for (i = 0; i < countPortal; i++) {
-        $('.portalKarte').append('<img class="portal" src="assets/game_templates/img/portal.png">');
+        $('.portalKarte').append('<img class="portal" src="assets/game_templates/img/shoto_figure.png">');
     }
 
     for (i = 0; i < countStar; i++) {
-        $('.starKarte').append('<img class="star" src="assets/game_templates/img/ara.png">');
+        $('.starKarte').append('<img class="star" src="assets/game_templates/img/k_dvd.jpg">');
     }
 
     // Restliche Variabeln definieren
@@ -148,10 +213,6 @@ $(document).ready(function () {
 
     // Geheimes Upgrade welches nurch durch eine bestimmte Kompination ausgeführt wird
     if (amountBauern >= 3 && clickercount > 1000 && amountReload > 3) {
-        $(".bauernKarte").empty();
-        for (i = 0; i < amountBauern; i++) {
-            $('.bauernKarte').append('<img class="bauer cat" src="assets/game_templates/img/nekogirl.png">');
-        }
         $('.clicker').attr('onclick', 'playAudio("assets/game_templates/audio/nyan.mp3")');
     } else {
 
@@ -160,16 +221,40 @@ $(document).ready(function () {
     // Geheimes Upgrade welches nurch ab 100000 clicks erscheint 
     $('.clickImg').click(function () {
         if (clickercount >= 9999) {
-            $(".clickImg").attr("src", "assets/game_templates/img/roxy-migurdia.gif")
+            $(".clickImg").attr("src", "assets/game_templates/img/roxy-migurdia.gif");
+            $('.clicker').attr('onclick', 'playAudio("assets/game_templates/audio/audio.mp3")')
         } else {}
     });
+
+    // Das Bild passt sich auch unter 10000 Clicks wieder an
+        $('.clickImg').click(function () {
+            if (clickercount < 9999) {
+                $(".clickImg").attr("src", "assets/game_templates/img/roxy_migurdia_v2.png");
+                $('.clicker').attr('onclick', 'playAudio("assets/game_templates/audio/audio.mp3")')
+            } else {}
+        });
+
+    // Nur wenn der Benutzer genau 10000 clicks erreicht erscheint ein Popup
+        $('.clickImg').click(function () {
+            if (clickercount == 9999) {
+                $(".first").toggleClass("open")
+            } else {}
+        });
+
     // Geheimes Upgrade welches nurch ab 1000000 clicks erscheint ausgeführt wird
     $('.clickImg').click(function () {
-        if (clickercount >= 99999) {
-            $(".clickImg").attr("src", "assets/game_templates/img/ara.png");
+        if (clickercount >= 999999) {
+            $(".clickImg").attr("src", "assets/game_templates/img/master_status.gif");
             $('.clicker').attr('onclick', 'playAudio("assets/game_templates/audio/nyan.mp3")')
         } else {}
     });
+
+        // Nur wenn der Benutzer genau 1000000 clicks erreicht erscheint ein Popup
+        $('.clickImg').click(function () {
+            if (clickercount == 999999) {
+                $(".second").toggleClass("open")
+            } else {}
+        });
 
     // Statistiken
     setInterval(function () {
@@ -203,20 +288,6 @@ $(document).ready(function () {
         localStorage.setItem('upgradeStarCost', upgradeStarCost);
         localStorage.setItem('amountReload', amountReload);
     }
-
-    // // Zufällige Farbe erzeugen und diese per Klick auf den Hintergrund setzen (16.8 Millionen möglichkeiten da RGB);
-    // $("#colorButton").click(function () {
-    //     // Zufällige Farbe aus RED;
-    //     var r = Math.floor(Math.random() * 256);
-    //     // Zufällige Farbe aus GREEN;
-    //     var g = Math.floor(Math.random() * 256);
-    //     // Zufällige Farbe aus BLUE;
-    //     var b = Math.floor(Math.random() * 256);
-    //     console.log(r, g, b);
-    //     var color = "rgb" + "(" + r + "," + g + "," + b + ")";
-    //     console.log(color);
-    //     $('body').css('background-color', color);
-    // });
 
     // Spiel zurücksetzten
     $('#resetButton').click(function () {
@@ -287,7 +358,7 @@ $(document).ready(function () {
             $('.bauerUpgradeWrapper .kostenUpgrade span').text(upgradeBauerCost); // Statistik updaten
             $('.spanBauernValue').text(amountBauern); // Kosten in der Info Box updaten
 
-            $('.bauernKarte').append('<img class="bauer" src="assets/game_templates/img/farmer.png">'); // bauer erstellen in der Karte
+            $('.bauernKarte').append('<img class="bauer" src="assets/game_templates/img/mha_manga.jpg">'); // bauer erstellen in der Karte
 
         } else { // wen man zu wenig clickers
             var clickerDiffrence = upgradeBauerCost - clickercount;
@@ -295,7 +366,7 @@ $(document).ready(function () {
             var hours = (new Date()).getHours();
             var minutes = (new Date()).getMinutes();
             var seconds = (new Date()).getSeconds();
-            $('.console').append('<p><span>' + hours + ':' + minutes + ':' + seconds + ' Uhr' + ' ></span> Du hast nicht genügend Clicks: dir fehlen ' + clickerDiffrence + ' Clicks um einen Bauer zu kaufen.</p>')
+            $('.console').append('<p><span>' + hours + ':' + minutes + ':' + seconds + ' Uhr' + ' ></span> Du hast nicht genügend Clicks: dir fehlen ' + clickerDiffrence + ' Clicks um ein Herz zu kaufen.</p>')
         }
     })
 
@@ -322,14 +393,14 @@ $(document).ready(function () {
             $('.fabrikUpgradeWrapper .kostenUpgrade span').text(upgradeFabrikCost); // Statistik updaten
             $('.spanFabrikValue').text(amountFabrik); // Kosten in der Info Box updaten
 
-            $('.fabrikKarte').append('<img class="fabrik" src="assets/game_templates/img/factory.png">') // Fabrik erstellen in der Karte
+            $('.fabrikKarte').append('<img class="fabrik" src="assets/game_templates/img/hutao_pillow.jpg">') // Fabrik erstellen in der Karte
         } else { // wen man zu wenig clickers
             var clickerDiffrence = upgradeFabrikCost - clickercount;
             //alert("Du hast nicht genügend clickers: dir fehlen " + clickerDiffrence + " clickers")
             var hours = (new Date()).getHours();
             var minutes = (new Date()).getMinutes();
             var seconds = (new Date()).getSeconds();
-            $('.console').append('<p><span>' + hours + ':' + minutes + ':' + seconds + ' Uhr' + ' ></span> Du hast nicht genügend Clicks: dir fehlen ' + clickerDiffrence + ' Clicks um eine Fabrik zu kaufen.</p>')
+            $('.console').append('<p><span>' + hours + ':' + minutes + ':' + seconds + ' Uhr' + ' ></span> Du hast nicht genügend Clicks: dir fehlen ' + clickerDiffrence + ' Clicks um einen Mond zu kaufen.</p>')
         }
     })
 
@@ -356,14 +427,14 @@ $(document).ready(function () {
             $('.portalUpgradeWrapper .kostenUpgrade span').text(upgradePortalCost); // Statistik updaten
             $('.spanPortalValue').text(amountPortal); // Kosten in der Info Box updaten
 
-            $('.portalKarte').append('<img class="portal" src="assets/game_templates/img/portal.png">') // Portal erstellen in der Karte
+            $('.portalKarte').append('<img class="portal" src="assets/game_templates/img/shoto_figure.png">') // Portal erstellen in der Karte
         } else { // wen man zu wenig clickers
             var clickerDiffrence = upgradePortalCost - clickercount;
             //    alert("Du hast nicht genügend clickers: dir fehlen " + clickerDiffrence + " clickers")
             var hours = (new Date()).getHours();
             var minutes = (new Date()).getMinutes();
             var seconds = (new Date()).getSeconds();
-            $('.console').append('<p><span>' + hours + ':' + minutes + ':' + seconds + ' Uhr' + ' ></span> Du hast nicht genügend Clicks: dir fehlen ' + clickerDiffrence + ' Clicks um ein Portal zu kaufen.</p>')
+            $('.console').append('<p><span>' + hours + ':' + minutes + ':' + seconds + ' Uhr' + ' ></span> Du hast nicht genügend Clicks: dir fehlen ' + clickerDiffrence + ' Clicks um einen Stern zu kaufen.</p>')
         }
     })
 
@@ -392,14 +463,14 @@ $(document).ready(function () {
             $('.starUpgradeWrapper .kostenUpgrade span').text(upgradeStarCost); // Statistik updaten
             $('.spanStarValue').text(amountStar); // Kosten in der Info Box updaten
 
-            $('.starKarte').append('<img class="star" src="assets/game_templates/img/ara.png">') // star erstellen in der Karte
+            $('.starKarte').append('<img class="star" src="assets/game_templates/img/k_dvd.jpg">') // star erstellen in der Karte
         } else { // wen man zu wenig clickers
             var clickerDiffrence = upgradeStarCost - clickercount;
             //    alert("Du hast nicht genügend clickers: dir fehlen " + clickerDiffrence + " clickers")
             var hours = (new Date()).getHours();
             var minutes = (new Date()).getMinutes();
             var seconds = (new Date()).getSeconds();
-            $('.console').append('<p><span>' + hours + ':' + minutes + ':' + seconds + ' Uhr' + ' ></span> Du hast nicht genügend Clicks: dir fehlen ' + clickerDiffrence + ' Clicks um einen Stern zu kaufen.</p>')
+            $('.console').append('<p><span>' + hours + ':' + minutes + ':' + seconds + ' Uhr' + ' ></span> Du hast nicht genügend Clicks: dir fehlen ' + clickerDiffrence + ' Clicks um einen Flieger zu kaufen.</p>')
         }
     })
 

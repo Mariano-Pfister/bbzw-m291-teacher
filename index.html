@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
   <meta charset="UTF-8">
@@ -18,18 +18,19 @@
   <div class="header">
     <div class="logo">
       <a href="./index.html">
-      <img class="logo" src="assets/landingpage_images/Logo.png"></a>
+        <img class="pagelogo" src="assets/landingpage_images/Logo.png">
+      </a>
     </div>
 
     <div class="title">
-      Online-Shop Marketing Game - Startseite
+        <a href="./game.html">Gamepage</a>
     </div>
 
     <div class="navigation">
       <a href="./shop.html">Link zum Shop</a>
     </div>
+</div>
 
-  </div>
   <div class="hero">
     <img class="logo" src="assets/landingpage_images/500x200.png" alt="Logo">
     <h1>Waifu4Life.com</h1>
@@ -38,7 +39,7 @@
     <div id="about" class="aboutShop">
       <div class="wrapper">
         <div class="about">
-          <h2>über den Shop</h2>
+          <h2>Über den Shop</h2>
           <div><span>Philipp, seit vielen Jahren grosser Manga- und Animefan, hatte anfangs der 2022  die Vision, einen Webshop für alles rund um Manga
              und Anime zu eröffnen. Ganz so, wie es ihn ausserhalb Japans nur in einzelnen ausländischen Grossstädten gibt - also wirklich spezialisiert auf die
               japanische Populärkultur. Die Schweizer Kunden sollen diese bisher schwierig erhältlichen Produkte bequem in online auf Rechnung einkaufen können. </span><span>
@@ -129,6 +130,7 @@
       </div>
     </div>
 
+  <div id="form">
     <div class="formBlock">
       <form name="contactForm">
         <div class="formLead">
@@ -141,42 +143,42 @@
         </div>
         <div class="row">
           <label>Vorname: </label>
-          <input type="text" id="vorname" name="vorname" pattern="[a-zA-Z äÄöÖüÜ]{1,}" maxlength="30"
+          <input type="text" id="vorname" name="vorname" maxlength="30"
             title="Bitte keine Zahlen und Sonderzeichen" required>
           <div class="error" id="vornameErr"></div>
         </div>
 
         <div class="row">
           <label>Nachname: </label>
-          <input type="text" id="nachname" name="nachname" pattern="[a-zA-Z äÄöÖüÜ]{1,}" maxlength="30"
+          <input type="text" id="nachname" name="nachname" maxlength="30"
             title="Bitte keine Zahlen und Sonderzeichen" required>
           <div class="error" id="nachnameErr"></div>
         </div>
 
         <div class="row">
           <label>Ort: </label>
-          <input type="ort" id="ort" name="ort" pattern="[a-zA-Z äÄöÖüÜ 0-9 ]{2,}" maxlength="50"
+          <input type="ort" id="ort" name="ort" maxlength="50"
             title="Bitte eine reale Adresse eingeben" required>
           <div class="error" id="ortErr"></div>
         </div>
 
         <div class="row">
           <label>PLZ: </label>
-          <input type="plz" id="plz" name="plz" pattern="[0-9]{4,}" maxlength="4" title="Bitte eine reale Postleitzahl eingeben"
+          <input type="plz" id="plz" name="plz" maxlength="4" title="Bitte eine reale Postleitzahl eingeben"
             required>
           <div class="error" id="plzErr"></div>
         </div>
 
         <div class="row">
           <label>Deine E-Mail Adresse: </label>
-          <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-äÄöÖüÜ]+\.[a-z]{2,4}" maxlength="50"
+          <input type="email" name="email" maxlength="50"
             title="Bitte eine reale E-Mail Adresse eingeben" required>
           <div class="error" id="emailErr"></div>
         </div>
 
         <div class="row">
           <label>Deine Mobile Nummer: </label>
-          <input type="tel" id="tel" name="tel" pattern="[0-9 +]{5,}" maxlength="20" title="Bitte nur Zahlen und +" required>
+          <input type="tel" id="tel" name="tel" maxlength="20" title="Bitte nur Zahlen und +" required>
           <div class="error" id="telErr"></div>
         </div>
 
@@ -187,7 +189,7 @@
 
       </form>
     </div>
-
+  </div>
 
   <div class="footer">
     <div class="logo"><img src="assets/landingpage_images/500x200.png" alt=""></div>

@@ -1,205 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online-Shop Marketing Game - Start Page</title>
+    <title>Online-Shop Marketing Game - Shop Page</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assets/js/database-client.js"></script>
     <script src="assets/js/form.js"></script>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/shop_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<div class="header">
-    <div class="logo">
-        <a href="./index.html">Logo</a>
-    </div>
-
-    <div class="title">
-        Online-Shop Marketing Game - Startseite
-    </div>
-
-    <div class="navigation">
-        <a href="./shop.html">Link zum Shop</a>
-    </div>
-
-</div>
-<div class="hero">
-    <img class="logo" src="https://dummyimage.com/500x200/000/fff" alt="Logo">
-    <h1>Waifu4Life.com</h1>
-</div>
-<div class="content">
-    <div id="about" class="aboutShop">
-        <div class="wrapper">
-            <div class="about">
-                <h2>über den Shop</h2>
-                <div><span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,</span><span>
-                    <img src="https://dummyimage.com/800x800/000/fff" alt="">
-                </span>
-                </div>
-                <div><span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,</span><span>
-                    <img src="https://dummyimage.com/800x800/000/fff" alt="">
-                </span>
-                </div>
-            </div>
+    <div class="header">
+        <div class="logo">
+          <a href="./index.html">
+            <img class="pagelogo" src="assets/landingpage_images/Logo.png">
+          </a>
+        </div>
+    
+        <div class="title">
+            <a href="./game.html">Gamepage</a>
+        </div>
+    
+        <div class="navigation">
+          <a href="./shop.html">Link zum Shop</a>
         </div>
     </div>
-    <div id="products" class="productBlock">
-        <div class="wrapper">
-            <h2>Produktliste</h2>
-            <div class="productList">
-                <div class="product">
-                    <img src="https://dummyimage.com/500x500/000/fff" alt="">
-                    <span>
-                        <h3>Titel</h3>
-                        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor</span>
-                    </span>
-                </div>
-                <div class="product">
-                    <img src="https://dummyimage.com/500x500/000/fff" alt="">
-                    <span>
-                        <h3>Titel</h3>
-                        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor</span>
-                    </span>
-                </div>
-                <div class="product">
-                    <img src="https://dummyimage.com/500x500/000/fff" alt="">
-                    <span>
-                        <h3>Titel</h3>
-                        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor</span>
-                    </span>
-                </div>
-                <div class="product">
-                    <img src="https://dummyimage.com/500x500/000/fff" alt="">
-                    <span>
-                        <h3>Titel</h3>
-                        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor</span>
-                    </span>
-                </div>
-                <div class="product">
-                    <img src="https://dummyimage.com/500x500/000/fff" alt="">
-                    <span>
-                        <h3>Titel</h3>
-                        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor</span>
-                    </span>
-                </div>
-                <div class="product">
-                    <img src="https://dummyimage.com/500x500/000/fff" alt="">
-                    <span>
-                        <h3>Titel</h3>
-                        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor</span>
-                    </span>
-                </div>
-                <div class="product">
-                    <img src="https://dummyimage.com/500x500/000/fff" alt="">
-                    <span>
-                        <h3>Titel</h3>
-                        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor</span>
-                    </span>
-                </div>
-                <div class="product">
-                    <img src="https://dummyimage.com/500x500/000/fff" alt="">
-                    <span>
-                        <h3>Titel</h3>
-                        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor</span>
-                    </span>
-                </div>
-            </div>
+ 
+      <!-- Main Bereich -->
+   <main class="site-content">
+    <div class="background"></div>
+    <h1>What do we offer?</h1>
+    
+      <p>Everything related to Anime Merchandise. The merchandise includes many different products. In our shop we offer a wide selection of the best anime merch. In our shop, we don't just limit ourselves to a specific product group, but with us you get everything you're looking for otaku.</p>
+ 
+    <!-- Angebote -->
+    <div class="section-title">
+      <h1>OUR PRODUCTS</h1>
+    </div>
+    <div class="container">
+      <div class='shop-card'>
+        <h1 class="title">Dakimakura</h1>
+        <h2 class="price">Starting at CHF 49.90</h2>
+        <br>
+        <div class="product">
+          <div class="desc">
+           Byon Byon Byooonn
+          </div>
+          <img src="assets/shop_images/dakimakura.jpg" />
         </div>
+        <br>
+        <label for="pillow-select">CHOOSE A DAKIMAKURA:</label>
+          <select name="pillows" id="pillow-select">
+             <option value="option">--Please choose an Dakimakura--</option>
+             <option value="pillow1">Chocola und Vanilla Body Pillow - CHF 49.90</option>
+             <option value="pillow2">Black Rock Shooter Body Pillow - CHF 49.90</option>
+             <option value="pillow3">Akame Body Pillow - CHF 49.90</option>
+             <option value="pillow4">Gawr Gura Body Pillow - CHF 49.90</option>
+             <option value="pillow5">Hu Tao Body Pillow - CHF 49.90</option>
+             <option value="pillow6">Yoshino Body Pillow - CHF 49.90</option>
+          </select>
+      </div>
+      <div class='shop-card'>
+       <h1 class="title">DVD</h1>
+       <h2 class="price">Starting at CHF 10.00</h2>
+       <br>
+       <div class="product">
+         <div class="desc">
+          Byon Byon Byooonn
+         </div>
+         <img src="assets/shop_images/dvd.jpg" />
+       </div>
+       <br>
+       <label for="dvd-select">CHOOSE A DVD:</label>
+       <select name="dvds" id="dvd-select">
+          <option value="option">--Please choose a DVD--</option>
+          <option value="dvd1">Your Name - CHF 26.00</option>
+          <option value="dvd2">Weathering with you - CHF 12.00</option>
+          <option value="dvd3">Spirited away - CHF 10.00</option>
+          <option value="dvd4">Das wandelnde Schloss - CHF 14.00</option>
+          <option value="dvd5">Mein Nachbar Totoro - CHF 10.00</option>
+          <option value="dvd6">Prinzessin Mononoke - CHF 12.00</option>
+       </select>
+     </div>
+     <div class='shop-card'>
+       <h1 class="title">Figure</h1>
+       <h2 class="price">Starting at CHF 29.90</h2>
+       <br>
+       <div class="product">
+         <div class="desc">
+          Byon Byon Byooonn
+         </div>
+         <img src="assets/shop_images/figur.jpg" />
+       </div>
+       <br>
+       <label for="figure-select">CHOOSE A FIGURE:</label>
+       <select name="figures" id="figure-select">
+          <option value="option">--Please choose a figure--</option>
+          <option value="figure1">Rengoku Kyojuro - CHF 120.00</option>
+          <option value="figure2">Shiro Nai - CHF 64.90</option>
+          <option value="figure3">Kirigaya Kirito - CHF 29.90</option>
+          <option value="figure4">Mydoria Izuku - CHF 72.90</option>
+          <option value="figure5">Ackermann Levi - CHF 49.90</option>
+          <option value="figure6">Yatogami Tohka - CHF 149.90</option>
+       </select>
+     </div>
+     <div class='shop-card'>
+       <h1 class="title">Manga</h1>
+       <h2 class="price">Starting at CHF 09.90</h2>
+       <br>
+       <div class="product">
+         <div class="desc">
+          Byon Byon Byooonn
+         </div>
+         <img src="assets/shop_images/aot_manga.jpg" />
+       </div>
+       <br>
+       <label for="manga-select">CHOOSE A MANGA:</label>
+       <select name="mangas" id="manga-select">
+          <option value="option">--Please choose a Manga--</option>
+          <option value="manga1">Attack on Titan BD. 1 - CHF 29.90</option>
+          <option value="manga2">Food Wars BD. 1 - CHF 29.90</option>
+          <option value="manga3">Chainsawman BD. 1 - CHF 09.90</option>
+          <option value="manga4">Demon Slayer BD. 1 - CHF 14.50</option>
+          <option value="manga5">Jujutsu Kaisen BD. 1 - CHF 10.50</option>
+          <option value="manga6">My Hero Academia BD. 1 - CHF 09.90</option>
+          <option value="manga7">That Time I Got Reincarnated as a Slime BD. 1 - CHF 18.50</option>
+       </select>
+     </div>
     </div>
-
-    <div id="motiv" class="motivation">
-        <div class="wrapperSmall">
-            <h2>Unsere Motivation</h2>
-            <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,</span>
+ 
+  </main>
+ 
+    <!-- Footer-Bereich -->
+    <div class="footer">
+        <div class="logo"><img src="assets/landingpage_images/500x200.png" alt=""></div>
+        <div class="footerNavi">
+          <span><a href="./index.html#about">Über uns</a></span>
+          <span><a href="./index.html#products">Unsere produkte</a></span>
+          <span><a href="./index.html#motiv">Motivation</a></span>
+          <span><a href="./index.html#form">Formular</a></span>
         </div>
-    </div>
-
-    <div id="form" class="formBlock">
-        <div class="wrapper">
-            <div class="formText">
-                <h2>Formular</h2>
-                <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</span>
-            </div>
-            <form>
-                <div>
-                    <label for="fname">First name:</label><br>
-                    <input type="text" id="fname" name="fname" value=""><br>
-                </div>
-                <div>
-                    <label for="lname">Last name:</label><br>
-                    <input type="text" id="lname" name="lname" value="">
-                </div>
-                <div>
-                    <label for="mail">e-mail:</label><br>
-                    <input type="email" id="mail" name="mail" value="">
-                </div>
-                <div>
-                    <h3>ich akzeptiere...</h3>
-                    <div class="checkbox">
-                        <span>
-                            <input type="checkbox" id="AGBs" name="AGBs" value="Bike">
-                            <label for="AGBs"> AGBs</label>
-                        </span>
-                        <span>
-                            <input type="checkbox" id="datenschutz" name="datenschutz" value="Car">
-                            <label for="datenschutz">Datenschutz</label>
-                        </span>
-                    </div>
-                </div>
-                <div>
-                    <h3>wie von waifu4life erfahren?</h3>
-                    <div class="checkbox">
-                        <span>
-                            <input type="checkbox" id="erf1" name="erf1" value="erf1">
-                        <label for="erf1">erf1</label>
-                        </span>
-                        <span>
-                            <input type="checkbox" id="erf2" name="erf2" value="erf2">
-                        <label for="erf2">erf2</label>
-                        </span>
-                        <span>
-                            <input type="checkbox" id="erf3" name="erf3" value="erf3">
-                        <label for="erf3">erf3</label>
-                        </span>
-                        <span>
-                            <input type="checkbox" id="erf4" name="erf4" value="erf4">
-                        <label for="erf4">erf4</label>
-                        </span>
-                    </div>
-                </div>
-                <div>
-                    <button type="submit">Submit</button>
-                    <br>
-                    <span>Die abgesendeten Daten werden zum Zweck der Bearbeitung Ihres Anliegens verarbeitet. Weitere Informationen zur Datennutzung finden Sie in der Datenschutzerklärung.</span>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-
-<div class="footer">
-    <div class="logo"><img src="https://dummyimage.com/500x200/000/fff" alt=""></div>
-    <div class="footerNavi">
-        <span><a href="#about">Über uns</a></span>
-        <span><a href="#products">Unsere produkte</a></span>
-        <span><a href="#motiv">Motivation</a></span>
-        <span><a href="#form">Formular</a></span>
-    </div>
-</div>
-
-<script src="assets/js/form.js"></script>
-</body>
-
-</html>
+      </div>
+ 
+ </body>
+ 
+ </html>

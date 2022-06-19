@@ -1,15 +1,39 @@
+@font-face {
+    font-family: 'Munro';
+    src: url('font/Munro.woff2') format('woff2'),
+    url('../font/Munro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
+    font-family: 'Munro';
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     border: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 html,
 body {
+    margin: auto;
     height: 100%;
     width: 100%;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    background-color: #FFF7F0;
+    max-width: 1680px;
     line-height: 1.4em;
 }
 
@@ -36,12 +60,24 @@ h2 {
     width: 30%;
 }
 
+.pagelogo {
+    width: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    .pagelogo {
+        width: 50px;
+    }
+}
+
 .header .title {
     width: 40%;
+    text-align: center;
 }
 
 .header .navigation {
     width: 30%;
+    text-align: end;
 }
 
 .hero {
@@ -50,6 +86,7 @@ h2 {
     align-items: center;
     padding: 30px 0;
     gap: 15px;
+    color: #000;
 }
 
 .content {
@@ -71,7 +108,7 @@ h2 {
 
 .aboutShop {
     padding: 80px 0;
-    background: #e3e3e3;
+    background: #000;
 }
 
 .about > div {
@@ -131,7 +168,7 @@ h2 {
     margin-right: 5%;
     margin-bottom: 30px;
     height: max-content;
-    background: #E3E3E3;
+    background: #000;
 }
 
 .productList .product > span {
@@ -155,7 +192,7 @@ h2 {
 
 .formBlock {
     padding: 80px 15px;
-    background: #e3e3e3;
+    background: #000;
 }
 
 .formText {
@@ -171,6 +208,7 @@ input[type=tel] {
     height: 30px;
     display: block;
     background: #fff;
+    color: #000;
     padding: 5px;
 }
 
@@ -242,25 +280,26 @@ form button {
 form button:hover {
     background: #F21861;
     cursor: pointer;
-    color: #e3e3e3;
+    color: #000;
 }
 
 .footer {
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 a {
-    color: #CE0E44;
+    color: #000;
 }
 
 a:hover {
-    color: #F21861;
+    text-decoration: underline;
 }
 
 a:visited {
-    color: #CE0E44;
+    color: #000;
 }
 
 .footer .footerNavi {
