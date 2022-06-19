@@ -1,6 +1,7 @@
 
 const submit = document.getElementById("submit")
 const email = document.getElementById("email")
+/*
 submit.disabled = true
 
 const validate = () => {
@@ -14,7 +15,7 @@ const validate = () => {
 email.addEventListener("keyup", (event) => {
     validate()
 })
-
+*/
 
 submit.addEventListener("click", async (event) => {
     event.preventDefault()
