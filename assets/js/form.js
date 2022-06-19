@@ -179,6 +179,7 @@ function printError(elemId, hintMsg) {
         "AGB's und Datenschutzerklärung aktzeptiert " + agb + "\n";
       // Daten ausgeben in Fenster
       alert(dataPreview);
-    }*/
+    }
   
   };
+*/
