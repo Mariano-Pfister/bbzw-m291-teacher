@@ -170,6 +170,8 @@ input[type=tel] {
     all: unset;
     height: 30px;
     display: block;
+    background: #fff;
+    padding: 5px;
 }
 
 input[type=submit],
