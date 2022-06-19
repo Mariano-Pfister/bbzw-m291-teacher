@@ -94,7 +94,6 @@ const validate = () => {
         }
         console.log("2")
     }*/
-}
 email.addEventListener("keyup", (event) => {
     validate()
 })
