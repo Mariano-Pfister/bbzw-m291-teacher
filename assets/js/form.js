@@ -61,7 +61,7 @@ function printError(elemId, hintMsg) {
         printError("vornameErr", "");
         vornameErr = false;
       }
-    }*/
+    }
   
     // Validiere Nachname
     if (nachname == "") {
@@ -148,6 +148,6 @@ function printError(elemId, hintMsg) {
         "AGB's und Datenschutzerklärung aktzeptiert " + agb + "\n";
       // Daten ausgeben in Fenster
       alert(dataPreview);
-    }
+    }*/
   
   };
